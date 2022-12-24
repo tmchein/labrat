@@ -1,18 +1,19 @@
 function carryGifts(gifts, maxWeight) {
-  const test = gifts.reduce(
-    (acc, itm, idx) => {
-      if (acc[1] + itm.length < maxWeight) {
-        if (itm.length <= maxWeight) {
-          acc[1] += itm.length;
-          acc[0].push(`${gifts[idx]} ${gifts[idx + 1]}`);
-        }
+  if (gifts.every((n) => n.length > maxWeight)) return [];
+  let currentWeight = 0;
+  return gifts.reduce(
+    (acc, itm) => {
+      if (maxWeight - (currentWeight + itm.length) >= 0) {
+        acc[acc.length - 1] += " " + itm;
+        currentWeight += itm.length;
+        acc[acc.length - 1] = acc[acc.length - 1].trim();
+        return acc;
       }
+      currentWeight = itm.length;
+      acc.push(itm);
       return acc;
     },
-    [[], 0]
+    [""]
   );
-
-  console.log(test);
 }
-
-carryGifts(["game", "bike", "book", "toy"], 4);
+console.log(carryGifts(["game", "bike", "book", "toy"], 7), "RESULTADO");
