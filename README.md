@@ -17,7 +17,7 @@ This repository is written in nodejs version v16.13.2
 You can clone this repository with the following command:
 
 ```
-git clone https://github.com/Davidr2998/labrat.git
+git clone https://github.com/tmchein/labrat.git
 ```
 
 ---
