@@ -41,5 +41,5 @@ Este repositorio esta escrito usando nodejs version v16.13.2
 Puedes clonar el repositorio utilizando el siguiente comando
 
 ```
-git clone https://github.com/Davidr2998/labrat.git
+git clone https://github.com/tmchein/labrat.git
 ```
