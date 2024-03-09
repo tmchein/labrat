@@ -20,3 +20,4 @@ const player = {
 };
 
 player.moveRight().moveDown().moveUp().moveLeft();
+// creating conflict
